@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.joongang.mapper.BookAttachMapper">
+
+	<!-- <insert id="insert">
+		insert into tbl_bookattach(uuid , uploadpath , filename , filetype , booknumber)
+			values(#{uuid} , #{uploadpath} , #{filename} , #{filetype} , #{booknumber})
+	</insert> -->
+	
+	<insert id="insert">
+		insert into tbl_bookattach(uuid , uploadpath , filename , booknumber)
+			values(#{uuid} , #{uploadpath} , #{filename} , #{booknumber})
+	</insert>
+
+	<select id="getAllBookAttachList" resultType="com.joongang.domain.BookAttachVO">
+		select * from tbl_bookattach
+	</select>
+
+	<select id="getSpecificBookAttachList" resultType="com.joongang.domain.BookAttachVO">
+		select * from tbl_bookattach where booknumber = #{booknumber}
+	</select>
+
+	<select id="getOldFiles" resultType="com.joongang.domain.BookAttachVO">
+		select * from tbl_attach where uploadpath = #{uploadpath}
+	</select>
+	
+	<select id="findByBookNumber" resultType="com.joongang.domain.BookAttachVO">
+		select * from tbl_bookattach where booknumber = #{booknumber}
+	</select>
+	
+	<select id="findByBookNumber2" resultType="com.joongang.domain.BookAttachVO">
+		select * from tbl_bookattach where booknumber = #{booknumber}
+	</select>
+	
+	<delete id='deleteAll'>
+		delete from tbl_bookattach where booknumber = #{booknumber}
+	</delete> 
+</mapper>

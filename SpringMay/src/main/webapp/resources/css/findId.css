@@ -1,0 +1,247 @@
+#header3{
+    width:100%;
+    height:200px;
+    background-image: url('../images/centerMenu_2.jpg');
+    background-size: cover;
+    position: relative;
+    top:-45px;
+}
+#header3_pic{
+    width:1400px;
+    height:200px;
+    margin:0 auto;
+}
+#header3_seleted_menu{
+    width:300px;
+    height:130px;
+    background-color: blue;
+    position: absolute;
+    bottom:0px;
+    z-index: 10;
+    color:white;
+    text-align: center;
+    padding-top:30px;
+    box-sizing: border-box;
+}
+#header3_seleted_menu_bar{
+    width:400px;
+    height:50px;
+    position: relative;
+    top:140px;
+    left:350px;
+    z-index: 10;
+    padding-top:10px;
+    font-size: 25px;
+}
+
+#header3_seleted_menu_bar > img {
+    width:30px;
+    height:30px;
+}
+#header3_bottom_bar{
+    width:100%;
+    height:60px;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    bottom:0px;
+}
+/*----------------------/header3--------------------------*/
+/*----------------------board--------------------------*/
+#board{
+    width:1400px;
+    /* height:700px; */
+    height:auto;
+    /* background-color: forestgreen; */
+    margin:0 auto;
+    position: relative;
+    top:-45px;
+}
+#side_menu{
+    float:left;
+    width:300px;
+    height:700px;
+    /* background-color: slateblue; */
+}
+#main_board{
+    float:left;
+    width:1100px;
+    /* height:700px; */
+    height:auto;
+    /* background-color: slategray; */
+}
+#side_ul > li{
+    width:300px;
+    height:60px;
+    /* background-color: brown; */
+    border-bottom: 1px solid grey;
+    box-sizing: border-box;
+    padding-top:10px;
+    padding-left:10px;
+    font-size: 20px;
+    font-weight:bold;
+}
+#side_ul li:nth-child(3){
+    background-color: grey;
+    color:white;
+}
+
+#main_selected_menu{
+    width:1100px;
+    height:100px;
+    box-sizing: border-box;
+    border-bottom:1px dashed grey;
+    padding-top:25px;
+    padding-left: 25px;
+    margin-bottom:20px;
+}
+.table-container{
+	width:1100px;
+}
+/*----------------------login--------------------------*/
+#login{
+    width:1400px;
+    height:800px;
+    /* background-color: red; */
+    margin:0 auto;
+}
+.head{
+    width:1400px;
+    height:100px;
+    /* background-color:  rgb(185, 185, 185); */
+    border-bottom: 2px dashed grey;
+    padding-top:23px;
+    padding-left:40px;
+    box-sizing: border-box;
+    margin:0 auto;
+}
+#login_content{
+    width:1100px;
+    height:700px;
+    box-sizing: border-box;
+}
+#login_content > h1{
+    box-sizing: border-box;
+    padding-left:20px;
+    box-sizing: border-box;
+}
+#login_content > h1 > span {
+    color:rgb(105, 105, 194);
+}
+#login_box{
+    width:1100px;
+    height:500px;
+    background-color: white;
+/*     margin:0 auto; */
+}
+#login_img{
+    float:left;
+    width:450px;
+    height:500px;
+    /* background-color: aqua; */
+}
+#login_img > img {
+    display:block;
+    width:300px;
+    height:300px;
+    margin:80px 0px ;
+}
+#login_login{
+    width:550px;
+    height:300px;
+    float:left;
+    /* background-color: brown; */
+    padding-top:150px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 30px;
+}
+.login_text_box{
+    display:block;
+    width:300px;
+    height:40px;
+    margin-bottom: 20px;
+}
+#login_btn{
+    width:115px;
+    height:115px;
+    background-color: rgb(56, 56, 197);
+    border-radius: 10px;
+    box-sizing: border-box;
+    color:white;
+    position: absolute;
+    top:145px;
+    left:310px;
+}
+.login_options{
+    color:black;
+}
+#login_notice{
+    float:left;
+    width:700px;
+    height:200px;
+    /* background-color: chartreuse; */
+    border-top: 1px solid rgb(185, 185, 185);
+    box-sizing: border-box;
+}
+#login_notice > span{
+    color: rgb(56, 56, 197);
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top:30px;
+}
+/*----------------------/login--------------------------*/
+/*--------------------findId----------------------*/
+#userData_input_box{
+    width:600px;
+    height:200px;
+    margin:0 auto;
+}
+#findId_table{
+    /* border-top:4px solid grey;
+    border-bottom:4px solid grey; */
+    border:4px solid grey;
+}
+#findId_table tr td:first-child{
+    width:200px;
+    height:50px;
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom:1px solid grey;
+}
+#findId_table tr td:last-child{
+    width:400px;
+    height:50px;
+    border-bottom:1px solid grey;
+    border-left : 1px solid grey;
+    box-sizing:border-box;
+    padding-left:20px;
+}
+#find_name{
+    width:200px;
+    height:20px;
+}
+#find_birthday{
+    width:200px;
+    height:20px;
+}
+.phoneNum{
+    width:60px;
+    height:20px;
+}
+#find_btn_box{
+	margin-top:20px;
+    width:600px;
+    height:50px;
+    text-align: center;
+}
+#fine_id_btn{
+    width:120px;
+    height:40px;
+    background-color: rgb(69, 69, 222);
+    color:white;
+}
+.star{
+	color:red;
+}

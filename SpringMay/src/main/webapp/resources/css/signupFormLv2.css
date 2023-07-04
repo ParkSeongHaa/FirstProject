@@ -1,0 +1,44 @@
+.membership_terms{
+    float:left;
+    width:1100px;
+    height:250px;
+}
+.term{
+    width:1100px;
+    height:200px;
+    background-color: rgb(187, 184, 184);
+    overflow:auto;
+    border:1px solid black;
+    box-sizing: border-box;
+}
+.agree{
+    width:20px;
+    height:20px;
+}
+.agree_term{
+    float:right;
+    font-size: 20px;
+    z-index: 10;
+}
+#last_check{
+    text-align: center;
+}
+#last_check > span{
+    font-size: 20px;
+}
+#all_agree{
+    margin-top:10px;
+    margin-bottom: 15px;
+}
+#next_level{
+    width:100px;
+    height:30px;
+    background-color: rgb(96, 96, 180);
+    color:white
+}
+#no_next_level{
+    width:150px;
+    height:30px;
+    background-color: rgb(223, 221, 221);
+    color:black;
+}

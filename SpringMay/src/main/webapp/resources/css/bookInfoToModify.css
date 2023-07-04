@@ -1,0 +1,159 @@
+/*----------------------header3--------------------------*/
+#header3{
+    width:100%;
+    height:200px;
+    background-image: url('../images/centerMenu_2.jpg');
+    background-size: cover;
+    position: relative;
+    top:-45px;
+}
+#header3_pic{
+    width:1400px;
+    height:200px;
+    margin:0 auto;
+}
+#header3_seleted_menu{
+    width:300px;
+    height:130px;
+    background-color: blue;
+    position: absolute;
+    bottom:0px;
+    z-index: 10;
+    color:white;
+    text-align: center;
+    padding-top:30px;
+    box-sizing: border-box;
+}
+#header3_seleted_menu_bar{
+    width:400px;
+    height:50px;
+    position: relative;
+    top:140px;
+    left:350px;
+    z-index: 10;
+    padding-top:10px;
+    font-size: 25px;
+}
+
+#header3_seleted_menu_bar > img {
+    width:30px;
+    height:30px;
+}
+#header3_bottom_bar{
+    width:100%;
+    height:60px;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    bottom:0px;
+}
+/*----------------------/header3--------------------------*/
+/*----------------------board--------------------------*/
+#board{
+    width:1400px;
+    height:450px;
+    /* background-color: forestgreen; */
+    margin:0 auto;
+    position: relative;
+    top:-45px;
+}
+#side_menu{
+    float:left;
+    width:300px;
+    height:450px;
+    /* background-color: slateblue; */
+}
+#main_board{
+    float:left;
+    width:1100px;
+    height:650px;
+    /* background-color: slategray; */
+}
+#side_ul > li{
+    width:300px;
+    height:60px;
+    /* background-color: brown; */
+    border-bottom: 1px solid grey;
+    box-sizing: border-box;
+    padding-top:10px;
+    padding-left:10px;
+    font-size: 20px;
+}
+#side_ul li:nth-child(1){
+    background-color: grey;
+    color:white;
+}
+#main_selected_menu{
+    width:1100px;
+    height:100px;
+    /* background-color: sandybrown; */
+    box-sizing: border-box;
+    border-bottom:1px dashed grey;
+    padding-top:25px;
+    padding-left: 25px;
+}
+/*----------------------/board--------------------------*/
+/*----------------------bookInfo--------------------------*/
+#bookInfoNotice{
+	float:left;
+	width:1100px;
+	height:70px;
+	font-size:30px;
+	padding-left:20px;
+	box-sizing:border-box;
+}
+#bookInfo{
+	float:left;
+	width:1100px;
+	height:400px;
+	background-color:rgb(255, 255, 238);
+}
+#bookImage{
+	float:left;
+	width:300px;
+	height:400px;
+	text-align:center;
+}
+#bookImage img{
+	width:250px;
+	height:370px;
+	margin-top:10px;
+}
+#bookExplain{
+	float:left;
+	width:800px;
+	height:400px;
+	font-size:25px;
+}
+#bookInfoBtnBox{
+	float:left;
+	width:1100px;
+	height:100px;
+	text-align:center;
+}
+#bookInfoBtnBox button{
+	width:150px;
+	height:50px;
+	box-sizing:border-box;
+	border-radius: 10px;
+	margin-top:15px;
+	font-size:20px;
+	border:none;
+	cursor: pointer;
+}
+#book_modify{
+	color:white;
+	background-color:blue;
+}
+#book_delete{
+	color:white;
+	background-color:black;
+}
+
+
+
+
+
+
+
+

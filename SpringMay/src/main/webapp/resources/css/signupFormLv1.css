@@ -1,0 +1,194 @@
+#header3{
+    width:100%;
+    height:200px;
+    background-image: url('../images/centerMenu_2.jpg');
+    background-size: cover;
+    position: relative;
+    top:-45px;
+}
+#header3_pic{
+    width:1400px;
+    height:200px;
+    margin:0 auto;
+}
+#header3_seleted_menu{
+    width:300px;
+    height:130px;
+    background-color: blue;
+    position: absolute;
+    bottom:0px;
+    z-index: 10;
+    color:white;
+    text-align: center;
+    padding-top:30px;
+    box-sizing: border-box;
+}
+#header3_seleted_menu_bar{
+    width:400px;
+    height:50px;
+    position: relative;
+    top:140px;
+    left:350px;
+    z-index: 10;
+    padding-top:10px;
+    font-size: 25px;
+}
+
+#header3_seleted_menu_bar > img {
+    width:30px;
+    height:30px;
+}
+#header3_bottom_bar{
+    width:100%;
+    height:60px;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    bottom:0px;
+}
+/*----------------------/header3--------------------------*/
+/*----------------------board--------------------------*/
+#board{
+    width:1400px;
+    /* height:700px; */
+    height:auto;
+    /* background-color: forestgreen; */
+    margin:0 auto;
+    position: relative;
+    top:-45px;
+}
+#side_menu{
+    float:left;
+    width:300px;
+    height:700px;
+    /* background-color: slateblue; */
+}
+#main_board{
+    float:left;
+    width:1100px;
+    /* height:700px; */
+    height:auto;
+    /* background-color: slategray; */
+}
+#side_ul > li{
+    width:300px;
+    height:60px;
+    /* background-color: brown; */
+    border-bottom: 1px solid grey;
+    box-sizing: border-box;
+    padding-top:10px;
+    padding-left:10px;
+    font-size: 20px;
+    font-weight:bold;
+}
+#side_ul li:nth-child(2){
+    background-color: grey;
+    color:white;
+}
+#main_selected_menu{
+    width:1100px;
+    height:100px;
+    /* background-color: sandybrown; */
+    box-sizing: border-box;
+    border-bottom:1px dashed grey;
+    padding-top:25px;
+    padding-left: 25px;
+}
+.table-container{
+	width:1100px;
+}
+/*----------------------membership--------------------------*/
+.head{
+    width:1400px;
+    height:100px;
+    /* background-color:  rgb(185, 185, 185); */
+    border-bottom: 2px dashed grey;
+    padding-top:23px;
+    padding-left:40px;
+    box-sizing: border-box;
+    margin:0 auto;
+}
+#membership_content{
+    width:1100px;
+    height:1130px;
+    /* background-color: red; */
+    margin:0 auto;
+}
+#membership_icon{
+    float:left;
+    width:1100px;
+    height:200px;
+   /*  background-color: aqua; */
+    padding-left:20px;
+    box-sizing: border-box;
+}
+.order{
+    text-align: center;
+    float:left;
+    /* width:330px; */
+    height:200px;
+    /* background-color: seagreen; */
+}
+.order_icon{
+    width:100px;
+    height:100px;
+    margin-top:50px;
+}
+.order_text{
+    font-size: 27px;
+    position: relative;
+    top:-35px;
+    color:rgb(114, 114, 197)
+}
+.arrow{
+    float:left;
+    width:20px;
+    height:50px;
+    margin-top:80px;
+    margin:80px 7px 0px 7px;
+}
+#membership_notice{
+    float:left;
+    width:1400px;
+    height:100px;
+    /* background-color: saddlebrown; */
+}
+#membership_notice > ul {
+    list-style: circle;
+    list-style-position: inside;
+    margin-left:30px;
+    margin-top:20px;
+    font-size: 20px;
+}
+#membership_ageCheck{
+    float:left;
+    width:1400px;
+    height:600px;
+    /* background-color: darkblue; */
+    /* border: 1px solid grey;
+    box-sizing: border-box; */
+}
+.ageCheck{
+    float:left;
+    width:550px;
+    height:600px;
+    /* background-color: salmon; */
+    padding-top:100px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+}
+.age_text{
+    
+    text-align: center;
+}
+.age{
+    width:300px;
+    height:300px;
+    margin-top:20px;
+    margin-left:130px;
+}
+#adult{
+    border-right:1px solid grey;
+    box-sizing: border-box;
+}
+/*----------------------/membershup--------------------------*/

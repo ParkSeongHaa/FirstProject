@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.joongang.mapper.BookMapper">
+
+	<insert id="insert">
+		insert into tbl_book(booktitle , bookwriter , bookcompany , bookyear , booklocation , booklental)
+			values( #{booktitle} , #{bookwriter} , #{bookcompany} , #{bookyear} , #{booklocation} , #{booklental})
+			<selectKey keyProperty="booknumber" resultType="int" order="AFTER">
+			select tbl_book_seq1.currval as booknumber from dual
+		</selectKey>
+	</insert>
+	
+	<select id="getAllBookList" resultType="com.joongang.domain.BookVO">
+		select * from tbl_book
+	</select>
+
+	
+	 <!-- <select id="getSpecificBookList" resultType="com.joongang.domain.BookVO">
+		select * from tbl_book where booktitle like '%'||#{booktitle}||'%'  and
+									bookwriter like '%'||#{bookwriter}||'%' and
+									bookcompany like '%'||#{bookcompany}||'%' and
+									bookyear between #{year1} and #{year2} and
+									booklocation like '%'||#{booklocation}||'%'
+	</select>  -->  
+	
+	<select id="getSpecificBookList" resultType="com.joongang.domain.BookVO">		 <!-- 옵션으로 검색시 사용 -->
+    <![CDATA[
+    SELECT *
+    FROM 
+    	(SELECT /*+INDEX(TBL_BOOK TBL_BOOK_PK)*/ 
+        rownum rn, booknumber, booktitle, bookwriter, bookcompany, bookyear, booklocation, booklental
+        FROM tbl_book WHERE]]>
+    <![CDATA[
+        	booktitle LIKE '%'||#{booktitle}||'%'
+        AND bookwriter LIKE '%'||#{bookwriter}||'%'
+        AND bookcompany LIKE '%'||#{bookcompany}||'%'
+        AND bookyear BETWEEN #{bookyear1} AND #{bookyear2}
+        AND booklocation LIKE '%'||#{booklocation}||'%'
+        AND rownum <= #{criteria.pageNum} * #{criteria.amount}
+    )
+    WHERE rn > (#{criteria.pageNum} - 1) * #{criteria.amount}
+    ]]>
+	</select>
+
+	
+
+	<select id="getListWithPaging" resultType="com.joongang.domain.BookVO">		
+		<![CDATA[
+       select booknumber , booktitle , bookwriter , bookcompany , bookyear , booklocation , booklental
+       from
+       (select /*+INDEX(TBL_BOOK TBL_BOOK_PK)*/
+        rownum rn, booknumber, booktitle, bookwriter, bookcompany, bookyear, booklocation , booklental
+       from tbl_book where]]>
+       <include refid="criteria"></include>
+        <![CDATA[ rownum <= #{pageNum} * #{amount}
+        )
+        where rn > (#{pageNum} -1) * #{amount} ]]>
+	</select>
+
+	<select id="getTotalCount" resultType="int">
+		select count(*) from tbl_book
+	</select>
+	
+	<select id="read" resultType="com.joongang.domain.BookVO">
+		select * from tbl_book where booknumber = #{booknumber}
+	</select>
+
+	<update id="update">
+		update tbl_book set
+			booktitle = #{booktitle},
+			bookwriter = #{bookwriter},
+			bookcompany = #{bookcompany},
+			bookyear = #{bookyear},
+			booklocation = #{booklocation},
+			booklental = #{booklental}
+		where booknumber = #{booknumber}
+	</update>
+	
+	<delete id='deleteAll'>		
+		delete from tbl_book where booknumber = #{booknumber}
+	</delete>
+	
+	<sql id="criteria">		<!--  홈페이지에서 책검색 -->
+		<trim prefix="(" suffix=") AND " prefixOverrides="OR">
+			<foreach item='type' collection="typeArr">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'T'.toString()">
+							booktitle like '%'||#{keyword}||'%'
+						</when>
+						<when test="type == 'W'.toString()">
+							bookwriter like '%'||#{keyword}||'%'
+						</when>
+						<when test="type == 'C'.toString()">
+							bookcompany like '%'||#{keyword}||'%'
+						</when>
+						<when test="type == 'L'.toString()">
+							booklocation like '%'||#{keyword}||'%'
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+	
+	
+</mapper>

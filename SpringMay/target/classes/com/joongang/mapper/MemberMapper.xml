@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.joongang.mapper.MemberMapper">
+
+	<insert id="insert">
+	insert into tbl_member(userid , username , userpw , gender, email , birthday , phone1 , phone2 , phone3
+						 , addresscode , address , addressdetail , addressnote , phonecompany , totalphone , totaladdress)
+		values (#{userid} , #{username} , #{userpw} , #{gender} , #{email} , #{birthday} , #{phone1} ,
+				#{phone2} , #{phone3} , #{addresscode} , #{address} , #{addressdetail} , #{addressnote} , #{phonecompany} , #{totalphone} , #{totaladdress})
+	</insert>
+
+	<select id="selectMemberByUserid" resultType="com.joongang.domain.MemberVO">
+		select * from tbl_member where userid = #{userid}
+	</select>
+	
+	<select id="selectMemberByUserpw" resultType="com.joongang.domain.MemberVO">
+		select * from tbl_member where userpw = #{userpw}
+	</select>
+	
+	<select id="getIdList" resultType='String'>
+		select userid from tbl_member
+	</select>
+	
+	<update id="editInfo">
+		update tbl_member set
+			userpw = #{userpw},
+			phone1 = #{phone1},
+			phone2 = #{phone2},
+			phone3 = #{phone3},
+			addresscode = #{addresscode},
+			address = #{address},
+			addressdetail = #{addressdetail},
+			addressnote = #{addressnote},
+			phonecompany = #{phonecompany},
+			totalphone = #{totalphone},
+			totaladdress = #{totaladdress},
+			email = #{email}
+		where userid = #{userid}
+	</update>
+
+	<select id="findId" resultType="com.joongang.domain.MemberVO">
+		select * from tbl_member where username = #{username} AND birthday = #{birthday} And totalphone = #{totalphone}
+	</select>
+
+	<select id="findIdForPw" resultType="com.joongang.domain.MemberVO">
+		select * from tbl_member 
+		where username = #{username} AND birthday = #{birthday} And totalphone = #{totalphone} And userid = #{userid}
+	</select>
+
+	<update id="modifyPw">
+		update tbl_member set
+			userpw = #{userpw}
+		where userid = #{userid}
+	</update>
+
+	<delete id='deleteMember'>
+		delete from tbl_member where userid=#{userid}
+	</delete>
+	
+
+
+</mapper>
